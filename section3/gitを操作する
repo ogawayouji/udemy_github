@@ -21,3 +21,10 @@ git commit
 コミットやステージに追加する前にどのファイルが変更されたか確認
 git status
   git の状態を確認
+
+git diff 
+  変更差分を確認 git add前
+  git diff <ファイル名>
+  
+  git add 後
+  git diff --staged
