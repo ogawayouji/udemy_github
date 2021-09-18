@@ -1,0 +1,88 @@
+git init
+
+.gitが作成
+  gitオブジェクト
+  インデックスファイル
+  設定ファイル
+
+git clone 
+  クローンを作成する
+    ファイルと.gitをコピーする
+
+git add 
+  変更をステージに追加する
+
+git commit 
+  変更を記録する
+
+  git commit -m ""　メッセージ付き
+  git commit -v 変更内容を確認
+
+コミットやステージに追加する前にどのファイルが変更されたか確認
+git status
+  git の状態を確認
+
+git diff 
+  変更差分を確認 git add前
+  git diff <ファイル名>
+  
+  git add 後
+  git diff --staged
+  終了　q
+
+git log
+  変更履歴を確認
+
+  git log --oneline 一行で表示
+  git log -p <ファイル名> ファイルの変更差分を表示
+  git log -n <数字> 表示するコミット数を指定
+
+git rm
+  ファイルの削除を記録
+  git rm -r ディレクトリ
+
+  git rm --cached ファイル名　ファイルを残し、履歴を消したいとき
+  リポジトリから消えるがワークツリーにはある
+
+git mv
+  ファイルの移動を記録
+  git mv 旧ファイル　新ファイル
+
+  mv 旧　新
+  git rm 
+  git add 
+
+git remote add origin リポジトリ名
+  originというショートカットでリモートリポジトリを記録
+
+git push 
+　ローカルリポジトリをリモートリポジトリにアップロード
+
+認証  PAT
+
+github画面の確認
+  <アカウント>/<リポジトリ名>
+
+  raw コピーしやすい
+  blame 責任者、編集者
+
+git config --global alias.ci commit 
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.co checkout
+
+コマンドの登録
+--global　PC全体の設定
+git config 設定
+
+.gitignore
+  バージョン管理したくないファイルを除外するファイル
+  # コメント
+  ファイル除外
+  index.html
+  ルートディレクトリ
+  /root.html
+  ディレクトリ以下を除外
+  dir /
+  /以外の文字列にマッチ*
+  /*/*.css
