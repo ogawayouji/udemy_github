@@ -15,4 +15,8 @@ git tag
 
 git show <>
   タグのデータを表示する
-  
+
+git push <リモート> <タグ>
+  タグをリモートリポジトリに送信する
+  git push origin --tags
+  タグを一斉送信
