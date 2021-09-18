@@ -13,3 +13,11 @@ git branch
 
 git log --online --decorate
 
+git checkout 既存ブランチ
+  ブランチ切り替え
+  git checkout -b ブランチ名
+  新規作成して切り替え
+
+git merge ブランチ名
+git merge リモート名/ブランチ名
+git merge origin/master
