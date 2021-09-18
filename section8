@@ -14,3 +14,51 @@ git merge feature
 fast-forwardができている
 
 mergeは履歴が枝分かれ
+
+開発ブランチでrebase -> 開発ブランチにmasterブランチをmerge
+git config --global merge.ff false
+  fast-forwardができる状態でもマージコミットを作成する
+
+rebaseに気を付けること
+  githubにpushしたコミットをrebaseしてはならない
+  git push -f はNG
+  コミットの流れがおかしくなるため
+
+merge 
+  コンフリクトの解決が比較的簡単 コンフリクトがおこる回数が少ない
+  履歴が複雑化
+
+rebase 
+  履歴がきれい
+  コンフリクトの解決が面倒 コンフリクトがコミットごとに発生する可能性
+
+pushしていないローカルの変更にはrebase
+プッシュした後はmerge、コンフリクトが起こりそうならmerge
+
+pull 
+  rebase型
+    git pull --rebase <リモート> <ブランチ>
+    マージコミットが残らない
+  merge型
+    git pull <リモート> <ブランチ>
+    マージコミットが残る
+
+git config --global pull.rebase true
+# masterでgit pullするときだけ
+git config branch.amster.rebase true
+
+rebaseで履歴を書き換える
+  直前のコミットをやり直す
+  git commit --amend リモートリポジトリにpushしたものはだめ
+  git rebase -i <>
+  git rebase -i HEAD~3
+    複数コミットをやり直す
+    対話的リベースモードへ
+    # やり直したい commitをeditする
+    コミットエディタを終了する
+
+    git commit --amend
+    git rebase --continue
+    # 次のコミットへ進む
+    HEAD~ 一番目の親
+    HEAD^ マージした場合の２番目
