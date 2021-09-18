@@ -21,3 +21,20 @@ git checkout 既存ブランチ
 git merge ブランチ名
 git merge リモート名/ブランチ名
 git merge origin/master
+
+Fast Foward 
+  ブランチが枝分かれしていなかった
+  ブランチのポインタを先に進めるだけ
+
+Auto merge 
+  基本的なマージ
+  枝分かれしていた場合、新しいコミットファイルが作成
+  マージコミット　親が二つ以上ある
+
+コンフリクト
+  複数人が同じ部分で別の編集をおこなったとき
+
+<<<<<<<<<<<<HEAD
+HEADの変更分
+>>>>>>>>>>>>feature
+feature(別ブランチ)の変更分
