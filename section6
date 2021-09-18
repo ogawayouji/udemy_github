@@ -2,4 +2,14 @@
   複数人で分業するための仕組み
   コミットを指したポインタ
   コミットするとブランチがさすコミットファイルが変わる
-  
+
+git branch <>
+  ブランチを新規作成
+
+git branch 
+  ブランチ確認
+  git branch -a 
+  すべてのブランチ確認
+
+git log --online --decorate
+
