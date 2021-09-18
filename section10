@@ -1,0 +1,15 @@
+git stash 
+git stash save 
+  作業を一時避難する
+
+git stash list
+  一時避難した作業の一覧を表示する
+
+git stash apply
+  最新の作業を復元する
+  git stash apply --index
+    ステージの状況も復元する
+
+git stash apply <>
+  特定の作業を復元する
+  git stash apply stash@{1}
