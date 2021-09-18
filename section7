@@ -2,3 +2,23 @@
   プルリクエスト
     自分の変更したコードをリポジトリに取り込んでもらえるよう依頼する機能
 
+  reviewerに依頼
+
+  git branch -D master 
+  git fetch 
+  git branch master origin/master
+
+コンフリクト
+  開発ブランチにmasterブランチをmerge -> コンフリクト
+
+github flow
+  githubのワークフロー
+  master -> branch -> pull request -> master ...
+
+masterは常にデプロイできるように
+新開発はmasterから新しいブランチを切り取って作成
+新しいブランチで作業しコミット
+定期的にpush
+masterにマージするためpull request
+レビューを受ける
+masterブランチにマージしたらすぐデプロイ
