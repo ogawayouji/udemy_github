@@ -1,0 +1,16 @@
+rebase
+  変更を統合する際に履歴をきれいにする
+
+git rebase ブランチ名
+  ブランチの基点となるコミットを別のコミットに移動する
+  履歴を一直線にすることができる
+
+流れ
+git checkout feature
+git rebase master 
+git checkout master 
+git merge feature 
+
+fast-forwardができている
+
+mergeは履歴が枝分かれ
