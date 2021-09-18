@@ -17,3 +17,19 @@ git fetch
 
 git checkout remotes/origin/main
 リモートリポジトリの内容をワークツリーに反映
+
+git pull
+  git pull origin main = git pull
+  fetch + merge 
+
+pullの注意点
+  作業ブランチに統合ブランチの内容を取り込んで困る場合がある
+
+git remote show origin 
+  リモート情報を確認する
+
+git remote rename 旧　新
+  リモートの名前変更
+
+git remote rm リモート名
+  リモート削除
