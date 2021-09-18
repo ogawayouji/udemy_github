@@ -74,3 +74,7 @@ rebaseで履歴を書き換える
       git add index.html
       git commit -m ''
       git rebase --continue
+
+git reset HEAD^ の説明のところで、「HEAD^」は「edit」に変更したコミットのことを指す、と説明しました。
+こちらは誤りで、HEAD^はHEADの1つ前のコミットを表すので、正しくは「193054e ファイル追加」のコミットを指します。
+git commit HEAD^ とすると、「193054e ファイル追加」の状態に戻すので、結果として「84gha0d READMEとindex修正」のコミットが取り消される形になります。
