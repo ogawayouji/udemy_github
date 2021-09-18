@@ -4,3 +4,20 @@ git init
   gitオブジェクト
   インデックスファイル
   設定ファイル
+
+git clone 
+  クローンを作成する
+    ファイルと.gitをコピーする
+
+git add 
+  変更をステージに追加する
+
+git commit 
+  変更を記録する
+
+  git commit -m ""　メッセージ付き
+  git commit -v 変更内容を確認
+
+コミットやステージに追加する前にどのファイルが変更されたか確認
+git status
+  git の状態を確認
