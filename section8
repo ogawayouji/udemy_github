@@ -62,3 +62,15 @@ rebaseで履歴を書き換える
     # 次のコミットへ進む
     HEAD~ 一番目の親
     HEAD^ マージした場合の２番目
+
+  git rebase -i <>
+    # コミットを消す
+    # 順番を入れ替える
+    squash 直前のコミットを一つにまとめる
+    edit
+      git reset HEAD^
+      git add README
+      git commit -m ''
+      git add index.html
+      git commit -m ''
+      git rebase --continue
